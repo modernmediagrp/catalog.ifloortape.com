@@ -1,0 +1,16 @@
+/* Patcher Page */
+.porto-patch-layout .porto-table h4 { margin: 0; }
+.porto-patch-layout .action-footer .btn { letter-spacing: 0; }
+.porto-patch-layout .porto-table .delete td:nth-child(2) { color: #ff7272; }
+.porto-patch-layout .btn-outline { background-color: #fff; border-color: #08c; transition: background-color .3s, color .3s, border-color .3s; margin-left: 1rem; }
+.porto-patch-layout .btn-outline:hover { background-color: #08c; color: #fff; }
+.porto-patch-layout .btn-outline[disabled] { pointer-events: none; }
+.porto-patch-layout .btn[disabled] { opacity: 0.6; }
+.porto-patch-layout .action-footer { margin-top: 2rem; }
+#patcher-tbody { position: relative; }
+#patcher-tbody i.porto-ajax-loader { left: 50%; width: 50px; height: 50px; border-radius: 50px; }
+#patcher-tbody.loading:before { content: ''; width: 100%; height: 100%; position: absolute; background-color: #ffffff8c; }
+.porto-important-note { padding: 1.6rem; color: #3c763d; background-color: #dff0d8; border-width: 0; border-radius: 4px; font-size: 1rem; }
+.porto-important-note.note-error { background-color: #ff7272; color: #fff; }
+#patcher-tbody td:first-child { width: 70%; }
+.patch-desc { font-weight: 500; }

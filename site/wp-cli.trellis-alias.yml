@@ -1,0 +1,9 @@
+"@development":
+  ssh: "catalog.ifloortape.test"
+  path: "/srv/www/catalog.ifloortape.com/current/web/wp"
+"@production":
+  ssh: "web@your_server_hostname:22"
+  path: "/srv/www/catalog.ifloortape.com/current/web/wp"
+"@staging":
+  ssh: "web@catalog.ifloortape.com:22"
+  path: "/srv/www/catalog.ifloortape.com/current/web/wp"

@@ -1,0 +1,40 @@
+apt_cache_valid_time: 3600
+apt_package_state: present
+apt_security_package_state: latest
+apt_dev_package_state: latest
+composer_keep_updated: true
+php_version: "8.1"
+ntp_timezone: Etc/UTC
+ntp_manage_config: true
+www_root: /srv/www
+max_journal_size: 512M
+
+php_max_execution_time: 600
+php_max_input_vars: 2000
+php_memory_limit: 256M
+php_post_max_size: 128M
+
+nginx_fastcgi_buffers: 8 32k
+nginx_fastcgi_buffer_size: 32k 
+
+letsencrypt_contact_emails:
+  - ift-dev@ifloortape.com
+
+
+
+cache:
+  enabled: true
+  skip_cache_uri: /wp-admin/|/wp-json/|/xmlrpc.php|wp-.*.php|/feed/|index.php|sitemap(_index)?.xml|/store.*|/cart.*|/my-account.*|/checkout.*|/addons.*
+  skip_cache_cookie: comment_author|wordpress_[a-f0-9]+|wp-postpass|wordpress_no_cache|wordpress_logged_in|woocommerce_cart_hash|woocommerce_items_in_cart|wp_woocommerce_session_
+
+# Values of raw_vars will be wrapped in `{% raw %}` to avoid templating problems if values include `{%` and `{{`.
+# Will recurse dicts/lists. `*` is wildcard for one or more dict keys, list indices, or strings. Example:
+#   - vault_wordpress_sites.*.*_salt    -- matches vault_wordpress_sites.example.com.env.secure_auth_salt etc.
+# Will not function for var names or topmost dict keys that contain a period ('.').
+raw_vars:
+  - vault_mail_password
+  - vault_mysql_root_password
+  - vault_users.*.password
+  - vault_users.*.salt
+  - vault_wordpress_env_defaults
+  - vault_wordpress_sites

@@ -1,0 +1,16 @@
+.DS_Store
+trellis/bk.vagrant/bundler/global.sol
+trellis/bk.vagrant/hostmanager/id
+trellis/bk.vagrant/machines/default/virtualbox/action_provision
+trellis/bk.vagrant/machines/default/virtualbox/action_set_name
+trellis/bk.vagrant/machines/default/virtualbox/box_meta
+trellis/bk.vagrant/machines/default/virtualbox/creator_uid
+trellis/bk.vagrant/machines/default/virtualbox/id
+trellis/bk.vagrant/machines/default/virtualbox/index_uuid
+trellis/bk.vagrant/machines/default/virtualbox/private_key
+trellis/bk.vagrant/machines/default/virtualbox/synced_folders
+trellis/bk.vagrant/machines/default/virtualbox/vagrant_cwd
+trellis/bk.vagrant/provisioners/ansible/inventory/vagrant_ansible_inventory
+trellis/bk.vagrant/rgloader/loader.rb
+*.xml
+*.sql
